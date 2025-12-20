@@ -14,13 +14,14 @@ interface Category {
   slug: string
 }
 
+
 interface BlogProps {
-  posts: Array<{
+  posts: BlogPost[] 
+  categories?: Array<{
     _id: string
     title: string
-    categories?: Category[]
+    slug: string
   }>
-  categories?: Category[]
 }
 
 export default function Blog({ posts }: BlogProps) {
